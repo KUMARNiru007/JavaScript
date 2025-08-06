@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert element</title>
+    <script>
+        function newElement() {
+        let data = [2,4,5,7,73]
+        let el = document.getElementById("el").value
+        let newEl = parseInt(el)
+
+        let position = document.getElementById("position").value;
+        console.log(data)
+        for(let i = data.length-1;i>=0;i--){
+            // document.write(data[i])
+            if(i >=position ){
+                data[i+1] = data[i];
+                if(i == position){
+                    data[i] = newEl
+                }
+            }
+        }
+        console.log(data)
+        let output = document.getElementById('output')
+         let p = document.createElement("p");
+    p.textContent = `New Array: [${data.join(", ")}]`;
+    output.append(p);
+    }
+
+
+    let items = [1,2,34,6,3,2]
+    items.splice(2,0,200) // (index slect, delete the index ,newElement instrer)
+    console.log(items) 
+    </script>
+</head>
+<body>
+    <input type="text" id="el" placeholder="enter element"/> Enter new element <br>
+    <input type="text" id="position" placeholder="enter position "/> Enter position <br>
+
+    <button onClick = "newElement()">Enter</button>
+    <div id="output"></div>
+
+
+</body>
+</html>
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/KUMARNiru007/DSA_in_JavaScript.git
+git push -u origin main
