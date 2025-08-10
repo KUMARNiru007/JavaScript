@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <script>
+        function Search(){
+        let data =[1,2,3,4,64,34,41,6,2,70]
+        let item = document.getElementById("item").value
+        item = parseInt(item);
+        let index = undefined;
+
+        for(let i= 0; i<=data.length-1;i++){
+            if(data[i]===item){
+                index = i
+                break;
+
+            }
+        }
+        console.log(data.indexOf(item));
+        console.log(index);
+        let output = document.getElementById('output')
+         let p = document.createElement("p");
+         if (index !== undefined) {
+                p.textContent = `Element found at index ${index}`;
+            } else {
+                p.textContent = `Element not found`;
+            }
+             output.appendChild(p)
+        }   
+       
+
+         </script>
+</head>
+<body>
+    <input type="text" id = "item" placeholder="search element">
+    <button onClick="Search()">Enter</button>
+     <div id="output"></div>
+</body>
+</html>
