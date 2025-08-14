@@ -45,3 +45,21 @@ for(let i =0;i<ar.length;i++){
 //Linear Complexity
 
 // its space complexity is O(1) -- a consant 
+
+//Task - 3 copy element one array to another 
+
+ar = [1,2,3,4,5];
+let newAr = [ar.length]; //T.C - O(1) |S.P O(n) 
+
+for(let i =0;i<ar.length;i++){ // T.C O(n) | Sp- O(1)
+    newAr[i] = ar[i]
+}
+
+for(let i =0;i<ar.length;i++){ // T.C O(n) | Sp- O(1)
+    console.log(newAr[i])
+}
+
+//Overall s.c --> O(1+1+1+1+n+1) = O(n)
+//Overall T.C  --> O(1+n+1+1+n+n) = O(n) 
+
+// -- > down th y axis the better 
